@@ -19,7 +19,7 @@ public class Main {
             int numberOfCharacters = lines.get(0).length();
 
 
-            for (int i = 0; i <= numberOfLines-4;) {
+            for (int i = 0; i <= numberOfLines-3;) {
                 for (int j = 0; j <= numberOfCharacters-3;) {
                     char[][] c = new char[3][3];
                     c[0][0]= lines.get(i).charAt(j);
@@ -34,11 +34,10 @@ public class Main {
                     c[2][1]= lines.get(i+2).charAt(j+1);
                     c[2][2]= lines.get(i+2).charAt(j+2);
 
-                    //chars.add(new Symbol(c));
+
                     j=j+3;
 
                     Symbol s = new Symbol(c);
-
                     System.out.print(s.toInt()+" ");
 
                 }
