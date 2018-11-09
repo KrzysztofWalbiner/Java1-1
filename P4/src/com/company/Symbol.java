@@ -24,7 +24,7 @@ public class Symbol {
         //zero
         zero[0][0] = ' '; zero[0][1] = '_'; zero[0][2] = ' ';
         zero[1][0] = '|'; zero[1][1] = ' '; zero[1][2] = '|';
-        zero[2][0] = ' '; zero[2][1] = '_'; zero[2][2] = ' ';
+        zero[2][0] = '|'; zero[2][1] = '_'; zero[2][2] = '|';
         //one
         one[0][0] = ' '; one[0][1] = ' '; one[0][2] = ' ';
         one[1][0] = ' '; one[1][1] = ' '; one[1][2] = '|';
@@ -61,53 +61,52 @@ public class Symbol {
         nine[0][0] = ' '; nine[0][1] = '_'; nine[0][2] = ' ';
         nine[1][0] = '|'; nine[1][1] = '_'; nine[1][2] = '|';
         nine[2][0] = ' '; nine[2][1] = '_'; nine[2][2] = '|';
-     }
+    }
 
     private boolean isZero() {
-        if (symbol.equals(zero)) return true;
+        if (equals(zero)) return true;
         else return false;
     }
     private boolean isOne() {
-        if (symbol.equals(one)) return true;
+        if (equals(one)) return true;
         else return false;
     }
     private boolean isTwo() {
-        if (symbol.equals(two)) return true;
+        if (equals(two)) return true;
         else return false;
     }
     private boolean isThree() {
-        if (symbol.equals(three)) return true;
+        if (equals(three)) return true;
         else return false;
     }
     private boolean isFour() {
-        if (symbol.equals(four)) return true;
+        if (equals(four)) return true;
         else return false;
     }
     private boolean isFive() {
-        if (symbol.equals(five)) return true;
+        if (equals(five)) return true;
         else return false;
     }
     private boolean isSix() {
-        if (symbol.equals(six)) return true;
+        if (equals(six)) return true;
         else return false;
     }
     private boolean isSeven() {
-        if (symbol.equals(seven)) return true;
+        if (equals(seven)) return true;
         else return false;
     }
     private boolean isEight() {
-        if (symbol.equals(eight)) return true;
+        if (equals(eight)) return true;
         else return false;
     }
     private boolean isNine() {
-        if (symbol.equals(nine)) return true;
+        if (equals(nine)) return true;
         else return false;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (Arrays.deepEquals(this.symbol, (char[][])obj)) return true;
-        else return false;
+
+    public boolean equals(char[][] obj) {
+        return Arrays.deepEquals(obj, this.symbol);
     }
 
     public int toInt() {
